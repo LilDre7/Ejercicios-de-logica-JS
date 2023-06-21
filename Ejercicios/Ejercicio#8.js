@@ -10,7 +10,11 @@ let X = 1;
 let Y = 2;
 
 const dicesTest = (X, Y) => {
+<<<<<<< HEAD
   return X + Y < 6 ? "Giro no es bueno" : "Giro es bueno";
+=======
+     return X + Y < 6 ? "Giro no es bueno" : "Giro es bueno";
+>>>>>>> a2e10ee20bf637be7e2db727a024580a4bed06cf
 };
 
 const testResult = dicesTest(X, Y);
@@ -31,11 +35,19 @@ console.log(testResult);
 let batería = 79;
 
 const stateBatery = (batería) => {
+<<<<<<< HEAD
   const state =
     batería >= 80
       ? "Bateria en buen estado"
       : "Estado de la bateria es precaria";
   return state;
+=======
+     const state =
+          batería >= 80
+               ? "Bateria en buen estado"
+               : "Estado de la bateria es precaria";
+     return state;
+>>>>>>> a2e10ee20bf637be7e2db727a024580a4bed06cf
 };
 
 const estadoDeBateria = stateBatery(batería);
@@ -61,6 +73,7 @@ const casosDePrueba = [[4, 3]];
 const distaciaInicial = 100;
 
 const JerryAndTom = (casosDePrueba) => {
+<<<<<<< HEAD
   for (i in casosDePrueba) {
     const [X, Y] = casosDePrueba[i];
     const puntoDeEscape = (X / Y) * distaciaInicial;
@@ -68,6 +81,15 @@ const JerryAndTom = (casosDePrueba) => {
       ? "Lo atrapo Tom que sad 😓"
       : "No lo atrapo Tom";
   }
+=======
+     for (i in casosDePrueba) {
+          const [X, Y] = casosDePrueba[i];
+          const puntoDeEscape = (X / Y) * distaciaInicial;
+          return puntoDeEscape > distaciaInicial
+               ? "Lo atrapo Tom que sad 😓"
+               : "No lo atrapo Tom";
+     }
+>>>>>>> a2e10ee20bf637be7e2db727a024580a4bed06cf
 };
 
 const loatrapo = JerryAndTom(casosDePrueba);
@@ -78,6 +100,7 @@ console.log(loatrapo);
 let n = 9;
 
 const multipliacionMultiplos = (n) => {
+<<<<<<< HEAD
   let suma = 0;
 
   for (i = 1; i < n; i++) {
@@ -86,6 +109,16 @@ const multipliacionMultiplos = (n) => {
     }
   }
   return suma;
+=======
+     let suma = 0;
+
+     for (i = 1; i < n; i++) {
+          if (i % 3 === 0 || i % 5 === 0) {
+               suma += i;
+          }
+     }
+     return suma;
+>>>>>>> a2e10ee20bf637be7e2db727a024580a4bed06cf
 };
 
 const sumaMultiplo = multipliacionMultiplos(n);
@@ -96,11 +129,19 @@ console.log(sumaMultiplo);
 const f = "Hola mundo";
 
 const vocalEncontrada = (f) => {
+<<<<<<< HEAD
   const v = 0;
 
   const cArray = f
     .split("  ")
     .filter((c) => c == "a" || c == "e" || c == "i" || c == "o" || c == "u");
+=======
+     const v = 0;
+
+     const cArray = f
+          .split("  ")
+          .filter((c) => c == "a" || c == "e" || c == "i" || c == "o" || c == "u");
+>>>>>>> a2e10ee20bf637be7e2db727a024580a4bed06cf
 };
 
 const cuantasVocales = vocalEncontrada(f);
@@ -111,17 +152,31 @@ console.log(cuantasVocales);
 const phrase = "Hola mundo";
 
 const revesePhrase = (phrase) => {
+<<<<<<< HEAD
   const x = phrase.split(" ").reverse().join();
   return x;
 };
+=======
+     const x = phrase.split(" ").reverse().join()
+     return x
+}
+>>>>>>> a2e10ee20bf637be7e2db727a024580a4bed06cf
 
 const terPhrase = revesePhrase(phrase);
 console.log(terPhrase);
 
+<<<<<<< HEAD
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!  */
 
 function ultimoCaracter(texto) {
   return texto.split(" ").at(-1);
+=======
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!  */
+
+function ultimoCaracter(texto) {
+     return texto.split(" ").at(-1);
+>>>>>>> a2e10ee20bf637be7e2db727a024580a4bed06cf
 }
 
 // Los test no deben modificarse
@@ -144,10 +199,17 @@ letters.at(-2);
 console.log(letters[0].split(" ").at(-1));
 
 function findLastWord(text) {
+<<<<<<< HEAD
   // escribe tu solución aquí
   let word = text.split(" ");
   // let resultado = word[1]
   return word[1];
+=======
+     // escribe tu solución aquí
+     let word = text.split(" ");
+     // let resultado = word[1]
+     return word[1];
+>>>>>>> a2e10ee20bf637be7e2db727a024580a4bed06cf
 }
 
 let text = findLastWord("Estoy aprendiendo JavaScript en Academlo");
@@ -171,7 +233,11 @@ const array = [1, 2, 3];
 let sum = 0;
 
 for (let i = 0; i < array.length; i++) {
+<<<<<<< HEAD
   sum += array[i];
+=======
+     sum += array[i];
+>>>>>>> a2e10ee20bf637be7e2db727a024580a4bed06cf
 }
 console.log(numbers.length);
 
@@ -183,10 +249,17 @@ console.log(arr.reduce(reducer));
 // Contar los numeros el resultado debe ser == 3
 
 function resultadotres(number) {
+<<<<<<< HEAD
   // escribe tu solución aquí
   let word = number;
   let resultado = word.toString();
   return resultado;
+=======
+     // escribe tu solución aquí
+     let word = number;
+     let resultado = word.toString();
+     return resultado;
+>>>>>>> a2e10ee20bf637be7e2db727a024580a4bed06cf
 }
 
 let number = resultadotres(128);
