@@ -90,3 +90,88 @@ const lenguajeHacker = (phrase) => {
 };
 
 console.log(lenguajeHacker(phrase));
+
+/*
+ * Escribe un programa que muestre cómo transcurre un juego de tenis y quién lo ha ganado.
+ * El programa recibirá una secuencia formada por "P1" (Player 1) o "P2" (Player 2), según quien
+ * gane cada punto del juego.
+ *
+ * - Las puntuaciones de un juego son "Love" (cero), 15, 30, 40, "Deuce" (empate), ventaja.
+ * - Ante la secuencia [P1, P1, P2, P2, P1, P2, P1, P1], el programa mostraría lo siguiente:
+ *   15 - Love
+ *   30 - Love
+ *   30 - 15
+ *   30 - 30
+ *   40 - 30
+ *   Deuce
+ *   Ventaja P1
+ *   Ha ganado el P1
+ * - Si quieres, puedes controlar errores en la entrada de datos.
+ * - Consulta las reglas del juego si tienes dudas sobre el sistema de puntos.
+ */
+
+const secuencia = ["P2", "P2", "P2", "P2", "P1", "P2", "P1", "P1"];
+const puntosGame = ["Love", 15, 30, 40, "Deuce"];
+
+let p1 = 4;
+let p2 = 4;
+
+const juego = (secuencia) => {
+  for (let i of secuencia) {
+    i === "P1" ? p1++ : p2++;
+    if (p1 === 4 && p2 === 4) {
+      console.log("Deuce");
+    } else if (p1 === p2 && p1 >= 3) {
+      console.log("Deuce");
+    } else if (p1 >= 4 && p1 - p2 === 1) {
+      console.log("Ventaja P1");
+    } else if (p2 >= 4 && p2 - p1 === 1) {
+      console.log("Ventaja P2");
+    } else if (p1 >= 4 && p1 - p2 >= 2) {
+      console.log("Ha ganado el P1");
+      return "Fin del juego";
+    } else if (p2 >= 4 && p2 - p1 >= 2) {
+      console.log("Ha ganado el P2");
+      return "Fin del juego";
+    } else {
+      console.log(`${puntosGame[p1]} - ${puntosGame[p2]}`);
+    }
+  }
+
+  return "Fin del juego";
+};
+
+juego(secuencia);
+
+/*
+ * Escribe un programa que sea capaz de generar contraseñas de forma aleatoria.
+ * Podrás configurar generar contraseñas con los siguientes parámetros:
+ * - Longitud: Entre 8 y 16.
+ * - Con o sin letras mayúsculas.
+ * - Con o sin números.
+ * - Con o sin símbolos.
+ * (Pudiendo combinar todos estos parámetros entre ellos)
+ */
+
+const generarContrasena = () => {
+  let password = "";
+  const letrasMinusculas = "abcdefghijklmnopqrstuvwxyz";
+  const letrasMayusculas = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  const numerosAleatorios = "0123456789";
+  const simbolos = "!@#$%^&*()_+";
+  const longitud = Math.floor(Math.random() * (16 - 8) + 8);
+
+  password = letrasMayusculas ? password.concat(letrasMayusculas) : password;
+  password = letrasMinusculas ? password.concat(letrasMinusculas) : password;
+  password = numerosAleatorios ? password.concat(numerosAleatorios) : password;
+  password = simbolos ? password.concat(simbolos) : password;
+
+  let contrasena = "";
+  for (let i = 0; i < longitud; i++) {
+    contrasena += password.charAt(Math.floor(Math.random() * password.length));
+  }
+
+  return contrasena;
+};
+
+console.log(generarContrasena());
