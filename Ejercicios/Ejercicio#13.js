@@ -103,10 +103,116 @@ console.log(resultEqual);
 
 // ! Escribe una función que reciba un array de números y devuelva un objeto con dos propiedades: la cantidad de números pares y la cantidad de números impares.
 
+const numbersArray3 = [1, 2, 3];
+
+const dobleArray = (numbersArray3) => {
+  const result = {};
+
+  for (i in numbersArray3) {
+    if (numbersArray3[i] % 2 === 0) {
+      result.pares = result.pares + 1 || 1;
+    } else {
+      result.impares = result.impares + 1 || 1;
+    }
+  }
+  return result;
+};
+
+const resultDoble = dobleArray(numbersArray3);
+console.log(resultDoble);
+
 // ! Escribe una función que reciba un array de números y devuelva un array con los números ordenados de forma ascendente, sin utilizar el método sort().
+
+const numArr = [1, 6, 56, 3, 2, 8, 4, 12];
+
+const orderNumbers = (numArr) => {
+  for (let i in numArr) {
+    for (let j in numArr) {
+      let numberAsc = numArr[i];
+      let numberDesc = numArr[j];
+      if (numberAsc < numberDesc) {
+        numArr[i] = numberDesc;
+        numArr[j] = numberAsc;
+      }
+    }
+  }
+  return numArr;
+};
+
+const resultOfOrder = orderNumbers(numArr);
+console.log(resultOfOrder);
 
 // ! Escribe una función que reciba un array de objetos, donde cada objeto representa una canción con su nombre y duración en segundos, y devuelva el tiempo total de reproducción de todas las canciones del array, en minutos y segundos.
 
+const songs = [
+  { name: "Bad Religion", duration: 220 },
+  { name: "Sweet Child O' Mine", duration: 276 },
+  { name: "I Will Survive", duration: 291 },
+  { name: "The Greatest Showman", duration: 271 },
+  { name: "The Queen Is Dead", duration: 275 },
+  { name: "The King Is Dead", duration: 275 },
+];
+
+const totalTime = (songs) => {
+  const newTime = [];
+
+  for (i in songs) {
+    const time = songs[i].duration;
+    console.log(time);
+    const minutes = Math.floor(time / 60);
+    const seconds = time % 60;
+    const totalTime = `Minutos: ${minutes} Segundos: ${seconds}`;
+    newTime.push(totalTime);
+  }
+  return newTime;
+};
+
+const resultTotalTime = totalTime(songs);
+console.log(resultTotalTime);
+
 // ! Escribe una función que reciba un array de números y devuelva un array con la suma acumulada de los números en cada posición del array.
+const numbersArray4 = [1, 2, 3, 4, 5, 6, 7, 7, 7, 8, 9];
+
+const sumAccrued = (numbersArray4) => {
+  let sum = 0;
+
+  for (i in numbersArray4) {
+    for (j in numbersArray4) {
+      sum += numbersArray4[j];
+      result.push(sum);
+    }
+    return sum;
+  }
+};
+const resultTotalSum = sumAccrued(numbersArray4);
+console.log(resultTotalSum);
 
 // ! Escribe una función que reciba un array de objetos, donde cada objeto representa un producto con su nombre, precio y cantidad en stock, y devuelva el precio total de todos los productos en stock.
+
+const products = [
+  { name: "Laptop", price: 1200, quantity: 2 },
+  { name: "Mouse", price: 40, quantity: 4 },
+  { name: "Keyboard", price: 60, quantity: 3 },
+  { name: "Monitor", price: 200, quantity: 1 },
+  { name: "Headset", price: 100, quantity: 2 },
+  { name: "Mousepad", price: 20, quantity: 2 },
+];
+
+const totalPrice = (products) => {
+  const result = [];
+
+  const price = products.map((x) => x.price);
+  console.log(price);
+
+  const totalPrice = price.reduce((a, b) => a + b);
+  console.log(totalPrice);
+
+  result.push(totalPrice);
+
+  return result;
+};
+
+const newTotalStock = totalPrice(products);
+console.log(newTotalStock);
+
+// ! Escribe una función que reciba un array de objetos, donde cada objeto representa una canción con su nombre, duración en segundos, y precio, y devuelva el nombre de la canción más cara.
