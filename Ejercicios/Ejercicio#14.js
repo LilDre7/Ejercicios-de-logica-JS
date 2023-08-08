@@ -114,6 +114,87 @@ console.log(resultBallons);
  * - Con el número 7, nos dirá: "7 es primo, no es fibonacci y es impar"
  */
 
+// ** compruebe y muestre si es "primo","fibonacci" y "par"
+
+// Inicio
+
+let num = 2;
+
+// Comprobar si es primo
+const isCousin = (num) => {
+  if (num <= 1) {
+    return false;
+  } else if (num <= 3) {
+    return true;
+  } else if (num % 2 === 0 || num % 3 === 0) {
+    return false;
+  }
+  let i = 5;
+  while (i * i <= num) {
+    if (num % i === 0 || num % (i + 2) === 0) {
+      return false;
+      break;
+    }
+    i += 6;
+  }
+  return true;
+};
+console.log(isCousin(num));
+
+// Comprobar si es fibonacci
+const isFibonacci = (num) => {
+  let a = 0;
+  let b = 1;
+  while (b <= num) {
+    if (b === num) {
+      return true;
+    }
+    let temp = b;
+    b = a + b;
+    a = temp;
+  }
+  return false;
+};
+console.log(isFibonacci(num));
+
+// Comprobar si es par
+const pair = (num) => {
+  if (num % 2 === 0) {
+    return true;
+  } else {
+    return false;
+  }
+};
+console.log(pair(num));
+
+// Mostrar los resultados
+
+const results = (num) => {
+  let resultString = "";
+
+  if (isCousin(num)) {
+    resultString += num + " es primo ";
+  } else {
+    resultString += num + " no es primo ";
+  }
+
+  if (isFibonacci(num)) {
+    resultString += num + " es fibonacci ";
+  } else {
+    resultString += num + " no es fibonacci ";
+  }
+
+  if (pair(num)) {
+    resultString += num + " es par ";
+  } else {
+    resultString += num + " es impar ";
+  }
+
+  return resultString;
+};
+
+console.log(results(num));
+
 // !! Cuenta la cantidad de veces que se repite cada palabra !! //
 // Ejemplo:
 // Si recibes la frase 'La vida programando es una buena vida' tienes que retornar el siguiente objeto:
@@ -174,19 +255,31 @@ const buyClient = [
   },
 ];
 
-const getPendingInvoices = (buyClient) => {
-  // ?? Tu tarea es identificar y devolver un arreglo con los ids de los invoices que no han sido pagados.
-  const obj = [];
+function findUnpaidInvoices(transactions) {
+  const unpaidInvoiceIds = [];
+  const invoiceStatus = {};
 
-  const invoiceMap = buyClient.map((invoice) => invoice.status);
-  invoiceMap.forEach((status) => {
-    if (status === "failed") {
-      console.log(status);
-      obj.push(status);
+  transactions.forEach((transaction) => {
+    const { invoice_id, status } = transaction;
+    console.log(transaction);
+
+    if (status === "success") {
+      invoiceStatus[invoice_id] = "paid";
+      console.log(invoiceStatus);
+    } else if (!invoiceStatus[invoice_id]) {
+      invoiceStatus[invoice_id] = "unpaid";
+      console.log(invoiceStatus);
     }
   });
-  return obj.length;
-};
 
-const resultPending = getPendingInvoices(buyClient);
-console.log(resultPending);
+  for (const [invoice_id, status] of Object.entries(invoiceStatus)) {
+    if (status === "unpaid") {
+      unpaidInvoiceIds.push(parseInt(invoice_id));
+    }
+  }
+
+  return unpaidInvoiceIds;
+}
+
+const unpaidInvoices = findUnpaidInvoices(buyClient);
+console.log(unpaidInvoices);
