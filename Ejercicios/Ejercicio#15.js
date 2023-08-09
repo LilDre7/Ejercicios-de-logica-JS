@@ -7,6 +7,7 @@ let numbers = 5;
 
 const factorial = (numbers) => {
   for (i = numbers - 1; i > 0; i--) {
+    console.log(numbers - 1);
     numbers = numbers * i;
   }
   return numbers;
@@ -44,3 +45,22 @@ const numberCubeX = (numberCubes) => {
 
 const resultCubeX = numberCubeX(numberCubes);
 console.log(resultCubeX);
+
+// Contar las edades de los usuarios del array
+
+const users = [
+  { name: "Juan", age: 20 },
+  { name: "Pedro", age: 30 },
+  { name: "Maria", age: 40 },
+  { name: "Luis", age: 50 },
+  { name: "Ana", age: 60 },
+];
+
+const totalAge = users.reduce((obj, user) => {
+  obj[user.age] ? obj[user.age]++ : (obj[user.age] = 1);
+  return obj;
+}, {});
+
+console.log(totalAge);
+
+// Hacer una implementacion del reduce

@@ -207,22 +207,24 @@ console.log(results(num));
 //   buena: 1
 // }
 
-const frase = "La vida programando es una buena vida";
+const text = "La vida programando es una buena vida";
 
-const countFrase = (frase) => {
+const countFrase = (text) => {
   const obj = {};
 
-  const arrayFrase = frase.split(" ");
+  const arrayFrase = text.split(" ");
 
-  arrayFrase.forEach((word) => (obj[word] ? obj[word]++ : (obj[word] = 1)));
+  // Con reduce
+  arrayFrase.reduce((word, acc) => {
+    obj[acc] = (obj[acc] || 0) + 1;
+  }, {});
 
   return obj;
 };
-const resultCount = countFrase(frase);
+const resultCount = countFrase(text);
 console.log(resultCount);
 
 // !! Obtén las facturas pendientes de pago ** //
-
 /*
  * La función getPendingInvoices() recibe como argumento un arreglo de intentos de cargos como el siguiente.
  */
@@ -283,3 +285,5 @@ function findUnpaidInvoices(transactions) {
 
 const unpaidInvoices = findUnpaidInvoices(buyClient);
 console.log(unpaidInvoices);
+
+// Solucion_del_profe:
