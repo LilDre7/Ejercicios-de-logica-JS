@@ -257,33 +257,53 @@ const buyClient = [
   },
 ];
 
-function findUnpaidInvoices(transactions) {
-  const unpaidInvoiceIds = [];
-  const invoiceStatus = {};
+// function findUnpaidInvoices(transactions) {
+//   const unpaidInvoiceIds = [];
+//   const invoiceStatus = {};
 
-  transactions.forEach((transaction) => {
-    const { invoice_id, status } = transaction;
-    console.log(transaction);
+//   transactions.forEach((transaction) => {
+//     const { invoice_id, status } = transaction;
+//     console.log(transaction);
 
-    if (status === "success") {
-      invoiceStatus[invoice_id] = "paid";
-      console.log(invoiceStatus);
-    } else if (!invoiceStatus[invoice_id]) {
-      invoiceStatus[invoice_id] = "unpaid";
-      console.log(invoiceStatus);
+//     if (status === "success") {
+//       invoiceStatus[invoice_id] = "paid";
+//       console.log(invoiceStatus);
+//     } else if (!invoiceStatus[invoice_id]) {
+//       invoiceStatus[invoice_id] = "unpaid";
+//       console.log(invoiceStatus);
+//     }
+//   });
+
+//   for (const [invoice_id, status] of Object.entries(invoiceStatus)) {
+//     if (status === "unpaid") {
+//       unpaidInvoiceIds.push(parseInt(invoice_id));
+//     }
+//   }
+
+//   return unpaidInvoiceIds;
+// }
+
+// const unpaidInvoices = findUnpaidInvoices(buyClient);
+// console.log(unpaidInvoices);
+
+// !! Solucion_del_profe:
+
+function getPendingInvoice(buyClient) {
+  // Se necesita iterar sobre cada uno de los elementos del arreglo
+  // Se necesita crear un objeto vacío
+  // Revisar si tenemos un status success esta revisados
+  const unpaind = [];
+  buyClient.forEach((charge) => {
+    const paid = buyClient.find((charge2) => {
+      return (
+        charge.invoice_id === charge2.invoice_id && charge2.status === "success"
+      );
+    });
+    if (!paid) {
+      unpaind.push(charge.invoice_id);
     }
   });
-
-  for (const [invoice_id, status] of Object.entries(invoiceStatus)) {
-    if (status === "unpaid") {
-      unpaidInvoiceIds.push(parseInt(invoice_id));
-    }
-  }
-
-  return unpaidInvoiceIds;
+  return unpaind.slice(0, 1);
 }
 
-const unpaidInvoices = findUnpaidInvoices(buyClient);
-console.log(unpaidInvoices);
-
-// Solucion_del_profe:
+console.log(getPendingInvoice(buyClient));
