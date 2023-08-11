@@ -69,13 +69,14 @@ console.log(totalAge);
 // Ejemplo: faaff es true porque alrevez es la misma frase
 // Ejemplo: affaajkk es false porque alrevez es la misma frase pero con unos caracteres mas
 
-let text = "faaff";
+let text = "pedro";
 
 // !! Esta es la forma resumida 😁🐧
 function isPalindromo(text) {
   let frequency = {};
   for (let i in text) {
     frequency[text[i]] = frequency[text[i]] + 1 || 1;
+    console.log(frequency[text[i]]);
   }
 
   let countImpar = 0;
@@ -144,7 +145,7 @@ El método splice() se utiliza para reemplazar una porción de elementos dentro 
 startIndex: El índice a partir del cual se realizará el reemplazo.
 subArray.length: La cantidad de elementos a ser reemplazados, que es igual a la longitud del subArray invertido.
 ...subArray: Los nuevos elementos que serán insertados en lugar de los elementos originales. Aquí usamos el operador de propagación (...) para pasar los elementos individuales del subArray.
-return array;:
+return array;
 
 Finalmente, la función retorna el arreglo array modificado con los elementos invertidos dentro del rango especificado.
 En resumen, este enfoque utiliza los métodos slice() para obtener el subarreglo, reverse() para invertirlo y splice() para reemplazar los elementos originales en el arreglo con los elementos invertidos del subarreglo. El resultado final es que el subarreglo dentro del rango dado es invertido en el arreglo original.
@@ -153,8 +154,7 @@ En resumen, este enfoque utiliza los métodos slice() para obtener el subarreglo
 function reverseArray(array, startIndex, endIndex) {
   // Uso slice para obtener un subarreglo y reverse() para invertirlo
   // Y uso splice para reemplazar los elementos originales en el arreglo con los elementos invertidos del subarreglo
-  const subArray = array.slice(startIndex, endIndex);
-  console.log(subArray);
+  const subArray = array.slice(startIndex, endIndex + 1).reverse();
   array.splice(startIndex, subArray.length, ...subArray);
   return array;
 }
