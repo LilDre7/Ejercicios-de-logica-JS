@@ -69,7 +69,7 @@ console.log(totalAge);
 // Ejemplo: faaff es true porque alrevez es la misma frase
 // Ejemplo: affaajkk es false porque alrevez es la misma frase pero con unos caracteres mas
 
-let text = "affaajkk";
+let text = "faaff";
 
 // !! Esta es la forma resumida 😁🐧
 function isPalindromo(text) {
@@ -111,3 +111,52 @@ function isPalindromo2(text) {
 }
 
 console.log(isPalindromo2(text));
+
+// !! Invierte el orden de un subarreglo //
+// !! La función reverseSubArray() recibe los siguientes parámetros //
+
+const array = [1, 2, 3, 4, 5];
+
+function reverseSubArray(array, startIndex, endIndex) {
+  const newArr = [...array];
+  const cantidadElementos = endIndex - startIndex + 1;
+
+  const mitad = Math.floor(cantidadElementos / 2);
+
+  for (let i = 0; i < mitad; i++) {
+    const temp = newArr[startIndex + i];
+    newArr[startIndex + i] = newArr[endIndex - i];
+    newArr[endIndex - i] = temp;
+  }
+  return newArr;
+}
+
+console.log(reverseSubArray(array, 1, 3));
+
+/*
+El método slice() toma una porción del arreglo desde el índice startIndex hasta endIndex + 1. Esto crea un nuevo arreglo llamado subArray que contiene los elementos que queremos invertir. El endIndex + 1 se utiliza para que el rango sea inclusivo.
+subArray.reverse():
+
+El método reverse() invierte el orden de los elementos en el arreglo subArray. Ahora, los elementos que estaban al principio del subarreglo estarán al final y viceversa.
+array.splice(startIndex, subArray.length, ...subArray):
+
+El método splice() se utiliza para reemplazar una porción de elementos dentro del arreglo original (array). Los parámetros son:
+startIndex: El índice a partir del cual se realizará el reemplazo.
+subArray.length: La cantidad de elementos a ser reemplazados, que es igual a la longitud del subArray invertido.
+...subArray: Los nuevos elementos que serán insertados en lugar de los elementos originales. Aquí usamos el operador de propagación (...) para pasar los elementos individuales del subArray.
+return array;:
+
+Finalmente, la función retorna el arreglo array modificado con los elementos invertidos dentro del rango especificado.
+En resumen, este enfoque utiliza los métodos slice() para obtener el subarreglo, reverse() para invertirlo y splice() para reemplazar los elementos originales en el arreglo con los elementos invertidos del subarreglo. El resultado final es que el subarreglo dentro del rango dado es invertido en el arreglo original.
+*/
+
+function reverseArray(array, startIndex, endIndex) {
+  // Uso slice para obtener un subarreglo y reverse() para invertirlo
+  // Y uso splice para reemplazar los elementos originales en el arreglo con los elementos invertidos del subarreglo
+  const subArray = array.slice(startIndex, endIndex);
+  console.log(subArray);
+  array.splice(startIndex, subArray.length, ...subArray);
+  return array;
+}
+
+console.log(reverseArray(array, 1, 3));
