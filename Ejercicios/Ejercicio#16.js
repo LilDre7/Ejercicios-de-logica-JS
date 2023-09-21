@@ -33,6 +33,8 @@ Escribe una función que tome un arreglo de números como argumento y devuelva e
 Consejo: Puedes usar un bucle para recorrer el arreglo y mantener un seguimiento del número más grande a medida que avanzas.
 */
 
+const numbers = [1, 3, 4, 5, 6, 7, 8, 8, 9];
+
 /*
 Ejercicio 2: Contar palabras en una cadena
 Escribe una función que cuente cuántas palabras hay en una cadena de texto. Puedes asumir que las palabras están separadas por espacios.
