@@ -98,6 +98,7 @@ Consejo: Puedes usar un bucle para calcular el factorial. Asegúrate de manejar 
 */
 
 let number = 5;
+// ** El factorial de numero es el numero multiplicado por todos los numeros anteriores hasta llegar al numero 1
 
 const factorial = (number) => {
   for (let i = number - 1; i > 0; i--) {
@@ -112,3 +113,22 @@ Ejercicio 5: Encontrar números primos
 Escribe una función que tome un número como argumento y determine si es primo (solo divisible por 1 y por sí mismo).
 Consejo: Puedes usar un bucle para verificar si el número es divisible por algún otro número entre 2 y su raíz cuadrada (para mejorar la eficiencia).
 */
+
+// La raiz cuadra es multiplicar el numero por si mismo
+// 3 al cuadro 2
+// Es igual a 3 x 3 = 9
+
+const numberPrime = 2;
+
+function searchPrime(numberPrime) {
+  // Calcular la raiz cuadrada
+
+  for (let i = 2; i < numberPrime; i++) {
+    if (numberPrime % i === 0 && numberPrime === 2) {
+      return true;
+    }
+  }
+  return false;
+}
+
+console.log(searchPrime(numberPrime));
