@@ -33,7 +33,25 @@ Escribe una función que tome un arreglo de números como argumento y devuelva e
 Consejo: Puedes usar un bucle para recorrer el arreglo y mantener un seguimiento del número más grande a medida que avanzas.
 */
 
-const numbers = [1, 3, 4, 5, 6, 7, 8, 8, 9];
+const numbers = [1, 3, 4, 5, 6, 7, 8, 8, 9, 7, 22, 9];
+
+const searchNumber = (numbers) => {
+  // Modo Hardcore 🤬
+  return numbers.sort((a, b) => b - a)[0];
+
+  // Modo Easy 🙀
+  /*
+  let counterNum = 0;
+  for (let i = 0; i < numbers.length; i++) {
+    if (numbers[i] > counterNum) {
+      counterNum = numbers[i];
+    }
+  }
+  return counterNum;
+  */
+};
+
+console.log(searchNumber(numbers));
 
 /*
 Ejercicio 2: Contar palabras en una cadena
@@ -41,11 +59,37 @@ Escribe una función que cuente cuántas palabras hay en una cadena de texto. Pu
 Consejo: Puedes dividir la cadena en un arreglo usando split(' ') y luego contar cuántos elementos hay en ese arreglo.
 */
 
+const cadena = "Soy desarrollador Web full stack";
+
+const counterWords = (cadena) => {
+  const totalWords = cadena.split(" ").length;
+  return totalWords;
+};
+
+console.log(counterWords(cadena));
+("Error 500: Imposible conectar con el servicio");
 /*
 Ejercicio 3: Comprobar si una palabra es un palíndromo
 Escribe una función que determine si una palabra es un palíndromo (se lee igual de izquierda a derecha y viceversa), ignorando los espacios y mayúsculas/minúsculas.
 Consejo: Puedes eliminar los espacios y convertir la palabra a minúsculas o mayúsculas para simplificar la comparación.
 */
+
+const word = "sandia";
+
+function name(word) {
+  let getWord = {};
+  for (let i in word) {
+    const count = word.split(word[i]).length - 1;
+    getWord[word[i]] = count;
+    if (count > 1) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+}
+
+console.log(name(word));
 
 /*
 Ejercicio 4: Calcular el factorial de un número

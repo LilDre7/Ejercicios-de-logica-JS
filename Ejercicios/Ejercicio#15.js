@@ -1,4 +1,4 @@
-// Ejercicio 1
+N; // Ejercicio 1
 // Escriba una función que reciba un numero y devuelva el factorial de ese numero.
 // Ejemplo:
 // Factorial de 5: 5 * 4 * 3 * 2 * 1 = 120
