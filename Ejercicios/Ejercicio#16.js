@@ -97,6 +97,12 @@ Escribe una función que calcule el factorial de un número entero. El factorial
 Consejo: Puedes usar un bucle para calcular el factorial. Asegúrate de manejar el caso especial de 0.
 */
 
+let number = 5;
+
+const factorial = (number) => {};
+
+console.log(factorial(number));
+
 /*
 Ejercicio 5: Encontrar números primos
 Escribe una función que tome un número como argumento y determine si es primo (solo divisible por 1 y por sí mismo).
