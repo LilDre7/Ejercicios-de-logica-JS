@@ -99,8 +99,12 @@ Consejo: Puedes usar un bucle para calcular el factorial. Asegúrate de manejar 
 
 let number = 5;
 
-const factorial = (number) => {};
-
+const factorial = (number) => {
+  for (let i = number - 1; i > 0; i--) {
+    number = number * i;
+  }
+  return number;
+};
 console.log(factorial(number));
 
 /*
