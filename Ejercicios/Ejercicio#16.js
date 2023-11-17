@@ -118,17 +118,17 @@ Consejo: Puedes usar un bucle para verificar si el n√∫mero es divisible por alg√
 // 3 al cuadro 2
 // Es igual a 3 x 3 = 9
 
-const numberPrime = 2;
+const numberPrime = 11;
 
 function searchPrime(numberPrime) {
   // Calcular la raiz cuadrada
-
   for (let i = 2; i < numberPrime; i++) {
-    if (numberPrime % i === 0 && numberPrime === 2) {
+    if (numberPrime % i === 0) {
       return true;
+    } else {
+      return false;
     }
   }
-  return false;
 }
 
 console.log(searchPrime(numberPrime));
