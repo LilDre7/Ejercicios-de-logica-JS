@@ -34,3 +34,11 @@ function convertirARomano(numero) {
 
 // Prueba
 console.log(convertirARomano(3549)); // Salida: MMMDXLIX
+
+// Devuelve true si la cadena proporcionada es un palíndromo. De lo contrario, devuelve false.
+
+// Un palíndromo es una palabra o frase que se escribe de la misma manera hacia adelante y hacia atrás, ignorando la puntuación, mayúsculas, minúsculas y espaciado.
+
+const palabra = "Anita lava la tina";
+
+function esPalindrom(palabra) {}
