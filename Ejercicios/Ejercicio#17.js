@@ -1,124 +1,36 @@
 // Conversor de números romanos
 // Convierte el número proporcionado en un número romano.
 
-function convertToRoman(num) {
-  /* 
-  Main IDea
-  convert num to str 
-  convert each str char to it's corresponding Roman number considering it's order 
-  join the result 
-  */
-  var str = "";
-  str += num;
-  var result = [];
-  var res1 = "";
-  var res2 = "";
-  var res3 = "";
-  var res4 = "";
-  if (str.length == 0) {
-    result = [];
-  } else if (str.length > 0) {
-    switch (str[str.length - 1]) {
-      case "1":
-        res1 = "I";
-        break;
-      case "2":
-        res1 = "II";
-        break;
-      case "3":
-        res1 = "III";
-        break;
-      case "4":
-        res1 = "IV";
-        break;
-      case "5":
-        res1 = "V";
-        break;
-      case "6":
-        res1 = "VI";
-        break;
-      case "7":
-        res1 = "VII";
-        break;
-      case "8":
-        res1 = "VIII";
-        break;
-      case "9":
-        res1 = "IX";
-        break;
-    }
-    switch (str[str.length - 2]) {
-      case "1":
-        res2 = "X";
-        break;
-      case "2":
-        res2 = "XX";
-        break;
-      case "3":
-        res2 = "XXX";
-        break;
-      case "4":
-        res2 = "XL";
-        break;
-      case "5":
-        res2 = "L";
-        break;
-      case "6":
-        res2 = "LX";
-        break;
-      case "7":
-        res2 = "LXX";
-        break;
-      case "8":
-        res2 = "LXXX";
-        break;
-      case "9":
-        res2 = "XC";
-        break;
-    }
-    switch (str[str.length - 3]) {
-      case "1":
-        res3 = "C";
-        break;
-      case "2":
-        res3 = "CC";
-        break;
-      case "3":
-        res3 = "CCC";
-        break;
-      case "4":
-        res3 = "CD";
-        break;
-      case "5":
-        res3 = "D";
-        break;
-      case "6":
-        res3 = "DC";
-        break;
-      case "7":
-        res3 = "DCC";
-        break;
-      case "8":
-        res3 = "DCCC";
-        break;
-      case "9":
-        res3 = "CM";
-        break;
-    }
-    switch (str[str.length - 4]) {
-      case "1":
-        res4 = "M";
-        break;
-      case "2":
-        res4 = "MM";
-        break;
-      case "3":
-        res4 = "MMM";
-        break;
+function convertirARomano(numero) {
+  const valoresRomanos = [1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1];
+
+  const simbolosRomanos = [
+    "M",
+    "CM",
+    "D",
+    "CD",
+    "C",
+    "XC",
+    "L",
+    "XL",
+    "X",
+    "IX",
+    "V",
+    "IV",
+    "I",
+  ];
+
+  let resultado = "";
+
+  for (let i = 0; i < valoresRomanos.length; i++) {
+    while (numero >= valoresRomanos[i]) {
+      resultado += simbolosRomanos[i];
+      numero -= valoresRomanos[i];
     }
   }
-  result.push(res4, res3, res2, res1);
-  return result.join("");
+
+  return resultado;
 }
 
-convertToRoman(39999);
+// Prueba
+console.log(convertirARomano(3549)); // Salida: MMMDXLIX
