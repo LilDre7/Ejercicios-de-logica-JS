@@ -6,8 +6,8 @@ Este proyecto contiene una colección de 100 ejercicios de lógica de programaci
 
 - **Álvaro Aburto**
   - Desarrollador con 1 año de experiencia
-  - [LinkedIn](https://www.linkedin.com/in/tu-linkedin)
-  - [GitHub](https://github.com/tu-usuario)
+  - [LinkedIn](https://www.linkedin.com/in/alvaro-aburto-dev/)
+  - [GitHub](https://github.com/LilDre7)
 
 ## Contenido
 
