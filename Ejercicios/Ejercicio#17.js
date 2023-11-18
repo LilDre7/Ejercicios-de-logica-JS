@@ -39,6 +39,35 @@ console.log(convertirARomano(3549)); // Salida: MMMDXLIX
 
 // Un palíndromo es una palabra o frase que se escribe de la misma manera hacia adelante y hacia atrás, ignorando la puntuación, mayúsculas, minúsculas y espaciado.
 
-const palabra = "Anita lava la tina";
+const palabra = "Yo gane";
 
-function esPalindrom(palabra) {}
+function esPalindrom(palabra) {
+  const cadenaLimpia = palabra.replace(/[^a-zA-Z0-9]/g, "").toLowerCase();
+
+  const longitud = cadenaLimpia.length;
+
+  let initial = 0;
+  let final = longitud - 1;
+
+  while (initial < final) {
+    if (cadenaLimpia[initial] !== cadenaLimpia[final]) {
+      return false;
+    }
+    initial++;
+    final--;
+  }
+  return true;
+}
+
+const deleteNoAlfanumeric = (palabra) => {
+  let cleanWord = "";
+
+  for (let i = 0; i < palabra.length; i++) {
+    if (palabra[i].match(/[a-zA-Z0-9]/)) {
+      cleanWord += palabra[i];
+    }
+  }
+  return cleanWord;
+};
+
+console.log(deleteNoAlfanumeric(palabra));
