@@ -72,5 +72,12 @@ const deleteNoAlfanumeric = (palabra) => {
 
 console.log(deleteNoAlfanumeric(palabra));
 
-const esAlfanumerico = (palabra) => {};
-const longitudDeCadena = (palabra) => {};
+const esAlfanumerico = (palabra) => {
+  return palabra.match(/[a-zA-Z0-9]/g) ? true : false;
+};
+
+const longitudDeCadena = (palabra) => {
+  return palabra.length;
+};
+
+console.log(longitudDeCadena(palabra));
