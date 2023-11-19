@@ -71,3 +71,6 @@ const deleteNoAlfanumeric = (palabra) => {
 };
 
 console.log(deleteNoAlfanumeric(palabra));
+
+const esAlfanumerico = (palabra) => {};
+const longitudDeCadena = (palabra) => {};
