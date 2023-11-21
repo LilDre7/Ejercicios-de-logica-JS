@@ -26,13 +26,13 @@ Los ejercicios han sido recopilados de diversos blogs y sitios web especializado
    git clone https://github.com/tu-usuario/proyecto-logica-programacion.git
    ```
 
-2. Navega al directorio del proyecto:
+2. 🛠️ Navega al directorio del proyecto:
 
    ```bash
    cd proyecto-logica-programacion
    ```
 
-3. Dockeriza la aplicación:
+3. 🐋 Dockeriza la aplicación:
 
    ```bash
    docker build -t nombre-imagen .
