@@ -3,7 +3,7 @@
 // !Considere una lista / matriz de ovejas.
 // Cada oveja tiene un nombre y un color(separado por comas).
 
-//* Haga un algoritmo que obtenga el número de ovejas y el nombre y el color de cada uno e imprima en la consola los nombres de las ovejas que son rojas y cuyo nombre también contiene las letras n y a, independientemente del orden, la capitalización o los espacios. 
+//* Haga un algoritmo que obtenga el número de ovejas y el nombre y el color de cada uno e imprima en la consola los nombres de las ovejas que son rojas y cuyo nombre también contiene las letras n y a, independientemente del orden, la capitalización o los espacios.
 
 //* Recordar.Debe contener las dos letras n y a en el nombre.No cuente ovejas que solo tienen una de las letras, debe tener ambas.
 
@@ -16,7 +16,16 @@
 // Ki na ma, rojo
 
 //* Producción:
-// Ki na ma 
+// Ki na ma
+
+const listSheep = '3\nNoé, azul\nEuge, rojo\nKi na ma, rojo';
+
+//********************** Logica *******************************//
+
+const lista = []
+
+let frutas = ["Manzana" , "Uva" , "Peras"]
+
 
 //! ¡Estamos haciendo los ajustes finales al trineo de Santa!
 
@@ -25,3 +34,5 @@
 //* Nuestro mecánico de confianza, Alexander, que tiene un gran Tesla, nos ha explicado que los saltos pueden verse como matrices ... y que solo tenemos que asegurarnos de que los números suban y bajen correctamente.También nos advierte que solo pasaremos matrices de al menos tres posiciones.
 
 //* Haga un algoritmo que reciba en la consola un texto con valores(separados por comas) e imprima verdadero en la consola si los valores suben y bajan estrictamente, de lo contrario imprime falso
+
+//********************** Logica *******************************//
