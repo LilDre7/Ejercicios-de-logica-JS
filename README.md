@@ -1,4 +1,4 @@
-# Proyecto de Ejercicios de Lógica de Programación en JavaScript
+# Proyecto de Ejercicios de Lógica de Programación en JavaScript 🚀
 
 Este proyecto contiene una colección de 100 ejercicios de lógica de programación en JavaScript. Cada ejercicio está diseñado para mejorar tus habilidades de programación y comprensión de la lógica de algoritmos.
 
@@ -26,13 +26,13 @@ Los ejercicios han sido recopilados de diversos blogs y sitios web especializado
    git clone https://github.com/tu-usuario/proyecto-logica-programacion.git
    ```
 
-2. Navega al directorio del proyecto:
+2. 🛠️ Navega al directorio del proyecto:
 
    ```bash
    cd proyecto-logica-programacion
    ```
 
-3. Dockeriza la aplicación:
+3. 🐋 Dockeriza la aplicación:
 
    ```bash
    docker build -t nombre-imagen .
