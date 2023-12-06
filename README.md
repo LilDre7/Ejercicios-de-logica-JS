@@ -1,4 +1,4 @@
-# Proyecto de Ejercicios de Lógica de Programación en JavaScript 🚀
+# Proyecto de Ejercicios de Lógica de Programación en JavaScript 🚀 o
 
 Este proyecto contiene una colección de 100 ejercicios de lógica de programación en JavaScript. Cada ejercicio está diseñado para mejorar tus habilidades de programación y comprensión de la lógica de algoritmos.
 
