@@ -18,14 +18,21 @@
 //* Producción:
 // Ki na ma
 
-const listSheep = '3\nNoé, azul\nEuge, rojo\nKi na ma, rojo';
+// const listSheep = '3\nNoé, azul\nEuge, rojo\nKi na ma, rojo';
 
 //********************** Logica *******************************//
 
-const lista = []
+const input = '3\nNoé, azul\nEuge, rojo\nKi na ma, rojo';
 
-let frutas = ["Manzana" , "Uva" , "Peras"]
+console.log(input)
 
+const main = (input) => {
+   const array = input.split('\n');
+
+   console.log(array);
+}
+
+console.log(main(input));
 
 //! ¡Estamos haciendo los ajustes finales al trineo de Santa!
 
@@ -36,3 +43,4 @@ let frutas = ["Manzana" , "Uva" , "Peras"]
 //* Haga un algoritmo que reciba en la consola un texto con valores(separados por comas) e imprima verdadero en la consola si los valores suben y bajan estrictamente, de lo contrario imprime falso
 
 //********************** Logica *******************************//
+
