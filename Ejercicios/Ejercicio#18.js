@@ -5,6 +5,25 @@
 
 //* Haga un algoritmo que obtenga el número de ovejas y el nombre y el color de cada uno e imprima en la consola los nombres de las ovejas que son rojas y cuyo nombre también contiene las letras n y a, independientemente del orden, la capitalización o los espacios.
 
+// Debo obtener:
+
+//* El numero de ovejas ✅
+//* El nombre ✅
+//* El color
+
+// Debo imprimir en consola: 
+
+// El nombre de las ovejas: 
+
+//* Que sean ROJAS
+//* Y que el nombre contengan la letra n y a
+//* No debe importar: 
+
+//* El orden
+//* La capitalización 
+//* Los espacios.
+
+
 //* Recordar.Debe contener las dos letras n y a en el nombre.No cuente ovejas que solo tienen una de las letras, debe tener ambas.
 
 // Por ejemplo:
@@ -22,14 +41,31 @@
 
 //********************** Logica *******************************//
 
-const input = '3\nNoé, azul\nEuge, rojo\nKi na ma, rojo';
+// parseInt lo que hace es que convierte un string a un numero entero.
 
-console.log(input)
+// Number hace lo mismo es mejor a mi gusto
+
+const input = '4\nNoé, azul\nPena, rojo\nKi na ma, rojo\nJi na ma, rojo';
+console.log(input);
 
 const main = (input) => {
-   const array = input.split('\n');
+   const list = input.split('\n');
 
-   console.log(array);
+   const numberOfSheep = Number(list[0]);
+   
+   const sheepsList = []
+
+   for (let i = 0; i <= numberOfSheep; i++) {
+      const sheepInfo = list[i].split(', ');
+
+      const name = sheepInfo[0];
+      const color = sheepInfo[1];
+
+      if (color === "rojo" && name.includes("n") && name.includes("a")) {
+         sheepsList.push(name)
+      }
+   }
+   console.log(sheepsList.join(", "));
 }
 
 console.log(main(input));
