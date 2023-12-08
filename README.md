@@ -4,7 +4,7 @@ Este proyecto contiene una colección de 100 ejercicios de lógica de programaci
 
 ## Autor
 
-- **Álvaro Aburto Ocampo 🛠️ **
+**Álvaro Aburto Ocampo 🛠️ **
   - Desarrollador con 1 año de experiencia
   - [LinkedIn](https://www.linkedin.com/in/alvaro-aburto-dev/)
   - [GitHub](https://github.com/LilDre7)
