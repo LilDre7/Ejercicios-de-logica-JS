@@ -39,7 +39,7 @@ Los ejercicios han sido recopilados de diversos blogs y sitios web especializado
    docker run -p 3000:3000 nombre-imagen
    ```
 
-4. ¡Explora y disfruta resolviendo los ejercicios!
+4. ¡Explora y disfruta resolviendo los ejercicios! 🧑🏾‍💻
 
 ## Contribuciones
 
