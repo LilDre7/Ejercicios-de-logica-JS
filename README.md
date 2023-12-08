@@ -2,7 +2,7 @@
 
 Este proyecto contiene una colección de 100 ejercicios de lógica de programación en JavaScript. Cada ejercicio está diseñado para mejorar tus habilidades de programación y comprensión de la lógica de algoritmos.
 
-## Autor
+## Autor 🤴🏾
 
 **Álvaro Aburto Ocampo**
   - Desarrollador con 1 año de experiencia
