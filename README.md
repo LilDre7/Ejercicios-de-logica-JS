@@ -14,7 +14,7 @@ Este proyecto contiene una colección de 100 ejercicios de lógica de programaci
 - Todos los ejercicios y sus soluciones están disponibles en el directorio `ejercicios`.
 - Cada ejercicio tiene su propio archivo con el enunciado y la solución proporcionada por Álvaro Aburto.
 
-## Fuentes
+## Fuentes 
 
 Los ejercicios han sido recopilados de diversos blogs y sitios web especializados en programación. Agradezco a la comunidad por proporcionar ejercicios desafiantes que contribuyen al aprendizaje continuo.
 
